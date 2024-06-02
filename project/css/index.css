@@ -157,9 +157,24 @@ header {
     margin: 10px;
 
 }
+.item-card{
+    /* border: 1px solid red; */
+    margin: 10px auto;
+    width: 320px;
+    height: auto;
+    padding-bottom: 10px;
 
-.item-image{ 
-   width: 100%;
+}
+.item-card:hover{
+    cursor: pointer;
+    box-shadow: 10px 10px 50px black;
+    transition: all 0.3s;
+}
+.item-card-text{
+    text-align: center;
+}
+.item-image{
+    width:100%;
 }
 
 .rating{ 
@@ -215,7 +230,7 @@ header {
 
 }
 .discount{ 
-    color: #ff905a;
+    color: darkred;
     font-weight: 400;
     font-size: 12px;
     margin-left: 5px;
@@ -230,8 +245,12 @@ header {
   padding: 5px 15px;
   border-radius: 10px;
   cursor: pointer;
+    transition: all 0.4s;
 
-
+}
+.btn-add-bag:hover{
+    background-color: green;
+    color: white;
 }
 .bag-item-count{ 
     background-color: #f16565;
@@ -253,6 +272,20 @@ header {
 
 .action_container {
     text-decoration: none;
+    cursor: pointer;
+    
+    
+    
+}
+.action_bar{
+    margin-top: 15px;
+    padding-bottom: 0;
+    
+
+}
+.action_name--orange:hover{
+    color: darkred;
+    fill: darkred;
 }
 a.action_container:link {
     color:black;
