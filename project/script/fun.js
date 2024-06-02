@@ -39,8 +39,9 @@ if( ! itemscontainerElement){
 let innerHTML='';
 items.forEach(item=> { 
   innerHTML+= `
-  <div class="item-container">
+  <div class="item-card">
   <img class="item-image" src="${item.image}" alt="item images">
+  <div class = "item-card-text">
   <div class="rating">
       ${item.rating.stars}⭐|${item.rating.count} 
   </div>
@@ -50,6 +51,7 @@ items.forEach(item=> {
   <span class="current-price">TK ${item.current_price}</span>
   <span class="original-price">Tk ${item.original_price}</span>
   <span class="discount">(${item.discount_percentage}% OFF)</span>
+  </div>
   </div>
   <button class="btn-add-bag" onclick="addToBag(${item.id})">Add to Bag</button>
   
