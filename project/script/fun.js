@@ -9,10 +9,17 @@ displayBagIcons();
 }
 
 function addToBag(itemId){ 
-   
+  
+  let btn = document.getElementsByTagName("button")[0];
+  let audio = btn.getElementsByTagName("audio")[0];
+
   bagItems.push(itemId);
   localStorage.setItem('bagItems',JSON.stringify(bagItems));
   displayBagIcons();
+
+  console.log(audio)
+  audio.play();
+
 
 }
 
@@ -53,11 +60,22 @@ items.forEach(item=> {
   <span class="discount">(${item.discount_percentage}% OFF)</span>
   </div>
   </div>
-  <button class="btn-add-bag" onclick="addToBag(${item.id})">Add to Bag</button>
+  <button class="btn-add-bag" onclick="addToBag(${item.id})">
+  <audio src = "yamete.mp3" type = "audio/mpeg">
+  </audio>
+  Add to Bag</button>
   
   </div>`;
 });
 itemscontainerElement.innerHTML = innerHTML;
+let btn = document.getElementsByTagName("button")[0];
+console.log("Hello")
+console.log(btn)
+// btn.addEventListener("click",()=>{
+//   let audio = btn.getElementsByTagName("audio")[0];
+//   console.log(audio)
+//   audio.play();
+// })
 
 }
 

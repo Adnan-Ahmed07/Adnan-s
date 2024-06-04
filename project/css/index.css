@@ -206,7 +206,9 @@ header {
     padding: 30px 0px 40px 0px;
     background: #FAFBFC;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; 
+    
+    
 }
 
 .footer_column {
@@ -249,12 +251,18 @@ header {
     width: 320px;
     height: auto;
     padding-bottom: 10px;
-
+    
 }
 .item-card:hover{
     cursor: pointer;
     box-shadow: 10px 10px 50px black;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05,1.05);
+   
+}
+.item-card:not(:hover)
+{
+    transition: all 0.3s ease-in-out;
 }
 .item-card-text{
     text-align: center;
@@ -375,4 +383,8 @@ header {
 }
 a.action_container:link {
     color:black;
+}
+.hidden{
+    display: none;
+
 }
